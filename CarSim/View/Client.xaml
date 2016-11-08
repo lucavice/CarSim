@@ -39,7 +39,8 @@
 
         <!--Tachometer-->
         <Image Source="../Resources/tachometer.png" Height="227" Width="292" Canvas.Left="398" Canvas.Top="56"/>
-
+        
+        <!--Indicator Shadow-->
         <Image Source="../Resources/shadow.png" Height="76" Width="100" Canvas.Left="143" Canvas.Top="146"/>
         <!--Indicator on Speedometer-->
         <Image Style="{StaticResource Indicator}" RenderTransformOrigin=".5,.5" Source="../Resources/indicator.png" Height="256" Width="80" Canvas.Left="152" Canvas.Top="54" Tag="{Binding Path=SpeedometerAngle, NotifyOnTargetUpdated=True}">
@@ -47,8 +48,8 @@
                 <RotateTransform Angle="{Binding Path=SpeedometerAngle}" />
             </Image.RenderTransform>
         </Image>
-        
 
+        <!--Indicator Shadow-->
         <Image Source="../Resources/shadow.png" Height="60" Width="55" Canvas.Left="517" Canvas.Top="156"/>
         <!--Indicator on Tachometer-->
         <Image Style="{StaticResource Indicator}" RenderTransformOrigin=".5,.5" Source="../Resources/indicator.png" Height="199" Width="61" Canvas.Left="514" Canvas.Top="84" Tag="{Binding Path=TachometerAngle, NotifyOnTargetUpdated=True}">
@@ -57,7 +58,7 @@
             </Image.RenderTransform>
         </Image>
        
-
+        <!-- Speedometer digital display -->
         <Border BorderThickness="2" Background="DarkGray" BorderBrush="DimGray" CornerRadius="4" Canvas.Left="141" Canvas.Top="276">
             <StackPanel >
                 <StackPanel Orientation="Horizontal">
@@ -67,6 +68,7 @@
             </StackPanel>
         </Border>
 
+        <!-- Tachometer digital display -->
         <Border BorderThickness="2" Background="DarkGray" BorderBrush="DimGray" CornerRadius="4" Canvas.Left="490" Canvas.Top="276">
             <StackPanel>
                 <StackPanel Orientation="Horizontal">

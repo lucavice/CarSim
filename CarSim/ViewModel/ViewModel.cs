@@ -19,22 +19,22 @@ namespace CarSim.ViewModel
 
         public ViewModel()
         {
-            _car.NewDataAvailable += Car_NewDataAvailable;
+            _car.ModelChanged += Car_NewDataAvailable;
             int refreshRate = 300; //ms
             new CarDataService(_car, refreshRate);
         }
 
         private void Car_NewDataAvailable()
         {
-            // The speedometer has different scaling > 100 km/h
-            if (_car.Speed < 100)
+            // The speedometer has different scaling > 80 km/h
+            if (_car.Speed < 80)
             {
-                // Mapping for range 0-100 km/h
+                // Mapping angle for range 0-80 km/h
                 SpeedometerAngle = 130*(_car.Speed)/100 - 130;
             }
             else
             {
-                // Mapping for range 100-260 km/h
+                // Mapping angle for range 80-260 km/h
                 SpeedometerAngle = 130 * (_car.Speed) / 160 - 81.25;
             }
 

@@ -76,6 +76,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\Car.cs" />
+    <Compile Include="Model\ModelNotification.cs" />
     <Compile Include="Services\CarDataService.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="View\Client.xaml.cs">

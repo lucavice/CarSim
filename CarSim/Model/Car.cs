@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CarSim.Model
 {
-    public class Car
+    public class Car: ModelNotification
     {
         private double _speed;
         private double _rpm;
@@ -16,7 +16,7 @@ namespace CarSim.Model
             {
                 _speed = value;
 
-                NewDataAvailable?.Invoke();
+                OnModelChanged();
             }
         }
 
@@ -27,13 +27,8 @@ namespace CarSim.Model
             {
                 _rpm = value;
 
-                NewDataAvailable?.Invoke();
+                OnModelChanged();
             }
         }
-
-        public delegate void DataHandler();
-
-        public event DataHandler NewDataAvailable;
-
     }
 }
